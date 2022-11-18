@@ -1,4 +1,8 @@
 
 fn main() {
-    println!("{0} {1} {1} {0}.", "Taylor", "Aaron");
+    // Named arguments
+    println!("{a} {b} {c}",
+    a="this",
+    b="is",
+    c="rust");
 }
