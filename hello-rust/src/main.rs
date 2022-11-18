@@ -1,11 +1,4 @@
-use ferris_says::say; // from the previous step
-use std::io::{stdout, BufWriter};
-
+// Hello world, duh
 fn main() {
-    let stdout = stdout();
-    let message = String::from("This is preeetty preetttyy pretty cool.");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+    println!("Hello, World!");
 }
