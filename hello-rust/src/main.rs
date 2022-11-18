@@ -1,6 +1,7 @@
 
 fn main() {
-    // Padding
-    println!("{x:0<3}", x=7);
-    println!("{x:0>3}", x=7);
+    // Excercise
+    let precision = 3;
+    let pi = 3.141592;
+    println!("{:.1$}", pi, precision);
 }
