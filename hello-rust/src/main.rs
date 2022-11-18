@@ -1,16 +1,5 @@
-// Line comment
-
-/*
-* Block
-* Comment */
-
-/*
-Another 
-Type 
-Of
-Block
-Comment */
 
 fn main() {
-    println!("Hello, World!");
+    let x= 5 + /* 90 + */ 5;
+    println!("Is `x` 10 or 100?\n well x = {}", x);
 }
