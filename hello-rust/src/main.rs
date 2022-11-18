@@ -1,5 +1,4 @@
 
 fn main() {
-    let x= 5 + /* 90 + */ 5;
-    println!("Is `x` 10 or 100?\n well x = {}", x);
+    println!("{0} {1} {1} {0}.", "Taylor", "Aaron");
 }
