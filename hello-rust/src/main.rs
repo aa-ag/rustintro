@@ -1,9 +1,6 @@
 
 fn main() {
-    // Formatting
-    println!("Base 10: {}",   69420);
-    println!("Base 2:  {:b}", 69420);
-    println!("Base 8:  {:o}", 69420);
-    println!("Base 16: {:x}", 69420);
-    println!("Base 16: {:X}", 69420);
+    // Padding
+    println!("{x:0<3}", x=7);
+    println!("{x:0>3}", x=7);
 }
