@@ -1,17 +1,23 @@
 fn main() {
-    let shadowed_binding = 1;
+    // Declare a variable binding
+    let a_binding;
 
     {
-        println!("before being shadowed: {}", shadowed_binding);
+        let x = 2;
 
-        // This binding *shadows* the outer one
-        let shadowed_binding = "abc";
-
-        println!("shadowed in inner block: {}", shadowed_binding);
+        // Initialize the binding
+        a_binding = x * x;
     }
-    println!("outside inner block: {}", shadowed_binding);
 
-    // This binding *shadows* the previous binding
-    let shadowed_binding = 2;
-    println!("shadowed in outer block: {}", shadowed_binding);
+    println!("a binding: {}", a_binding);
+
+    let another_binding;
+
+    // Error! Use of uninitialized binding
+    // println!("another binding: {}", another_binding);
+    // FIXME ^ Comment out this line
+
+    another_binding = 1;
+
+    println!("another binding: {}", another_binding);
 }
