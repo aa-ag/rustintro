@@ -1,23 +1,19 @@
 fn main() {
-    // Integer addition
-    println!("1 + 2 = {}", 1u32 + 2);
+    // This binding lives in the main function
+    let long_lived_binding = 1;
 
-    // Integer subtraction
-    println!("1 - 2 = {}", 1i32 - 2);
-    // TODO ^ Try changing `1i32` to `1u32` to see why the type is important
+    // This is a block, and has a smaller scope than the main function
+    {
+        // This binding only exists in this block
+        let short_lived_binding = 2;
 
-    // // Short-circuiting boolean logic
-    // println!("true AND false is {}", true && false);
-    // println!("true OR false is {}", true || false);
-    // println!("NOT true is {}", !true);
+        println!("inner short: {}", short_lived_binding);
+    }
+    // End of the block
 
-    // // Bitwise operations
-    // println!("0011 AND 0101 is {:04b}", 0b0011u32 & 0b0101);
-    // println!("0011 OR 0101 is {:04b}", 0b0011u32 | 0b0101);
-    // println!("0011 XOR 0101 is {:04b}", 0b0011u32 ^ 0b0101);
-    // println!("1 << 5 is {}", 1u32 << 5);
-    // println!("0x80 >> 2 is 0x{:x}", 0x80u32 >> 2);
+    // Error! `short_lived_binding` doesn't exist in this scope
+    // println!("outer short: {}", short_lived_binding);
+    // FIXME ^ Comment out this line
 
-    // // Use underscores to improve readability!
-    // println!("One million is written as {}", 1_000_000u32);
+    println!("outer long: {}", long_lived_binding);
 }
