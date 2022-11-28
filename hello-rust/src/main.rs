@@ -1,23 +1,18 @@
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: u8,
+}
+
 fn main() {
-    // Declare a variable binding
-    let a_binding;
+    // Create struct with field init shorthand
+    let name = String::from("Peter");
+    let age = 27;
+    let peter = Person { name, age };
 
-    {
-        let x = 2;
-
-        // Initialize the binding
-        a_binding = x * x;
-    }
-
-    println!("a binding: {}", a_binding);
-
-    let another_binding;
-
-    // Error! Use of uninitialized binding
-    // println!("another binding: {}", another_binding);
-    // FIXME ^ Comment out this line
-
-    another_binding = 1;
-
-    println!("another binding: {}", another_binding);
+    // Print debug struct
+    println!("{:?}", peter);
 }
