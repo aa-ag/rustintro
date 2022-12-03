@@ -1,4 +1,6 @@
 use structopt::StructOpt;
+use exitfailure::{ExitFailure};
+use serde_derive::{Deserialize};
 
 #[derive(StructOpt)]
 struct  Cli {
@@ -6,16 +8,19 @@ struct  Cli {
     state: String,
 }
 
+#[derive(Deserialize,Debug)]
 struct Forecast {
     timezone: i32,
     id: i32,
     weather: Weather,
 }
 
+#[derive(Deserialize,Debug)]
 struct Weather {
     details: Details
 }
 
+#[derive(Deserialize,Debug)]
 struct  Details {
     id: i32,
     main: String,
