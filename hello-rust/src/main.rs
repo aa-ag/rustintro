@@ -1,34 +1,12 @@
-use structopt::StructOpt;
-use exitfailure::{ExitFailure};
-use serde_derive::{Deserialize};
 
-#[derive(StructOpt)]
-struct  Cli {
-    city: String,
-    state: String,
-}
-
-#[derive(Deserialize,Debug)]
-struct Forecast {
-    timezone: i32,
-    id: i32,
-    weather: Weather,
-}
-
-#[derive(Deserialize,Debug)]
-struct Weather {
-    details: Details
-}
-
-#[derive(Deserialize,Debug)]
-struct  Details {
-    id: i32,
-    main: String,
-    description: String,
-    icon: String,
+struct Point {
+    x: f32,
+    y: f32,
 }
 
 fn main() {
-    let args = Cli::from_args();
-    println!("Hello from the city of {}, {}.", args.city, args.state)
+    let point: Point = Point { x: 1.23, y: 4.56 };
+
+    // Access the fields of the point
+    println!("point coordinates: ({}, {})", point.x, point.y);
 }
