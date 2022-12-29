@@ -9,6 +9,9 @@ fn main() {
         x_cube + x_squared + x
     };
 
+    let z = 2 * x;
+
     println!("x is {:?}", x);
     println!("y is {:?}", y);
+    println!("z is {:?}", z);
 }
