@@ -1,20 +1,10 @@
+use std::convert::From;
+
 fn main() {
-    // A counter variable
-    let mut n = 1;
+    let my_str = "hello";
+    println!("{:?}",my_str);
 
-    // Loop while `n` is less than 101
-    while n < 101 {
-        if n % 15 == 0 {
-            println!("fizzbuzz");
-        } else if n % 3 == 0 {
-            println!("fizz");
-        } else if n % 5 == 0 {
-            println!("buzz");
-        } else {
-            println!("{}", n);
-        }
+    let my_string = String::from(my_str);
+    println!("{:?}",my_string);
 
-        // Increment counter
-        n += 1;
-    }
 }
