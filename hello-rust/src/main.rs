@@ -19,7 +19,7 @@ impl TryFrom<i32> for EvenNumber {
 fn main() {
     // TryFrom
 
-    assert_eq!(EvenNumber::try_from(5), Ok(EvenNumber(8)));
+    assert_eq!(EvenNumber::try_from(8), Ok(EvenNumber(8)));
     assert_eq!(EvenNumber::try_from(5), Err(()));
 
     // TryInto
